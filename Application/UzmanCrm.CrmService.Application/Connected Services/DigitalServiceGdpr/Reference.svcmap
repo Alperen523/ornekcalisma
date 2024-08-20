@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9214f65c-596b-415c-ab68-40d539dddf1a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://gdpr.dijitalizin.com/OtpService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OtpService.xsd" MetadataType="Schema" ID="f5c0180b-7527-45ec-9c8e-16ea41e2e0ee" SourceId="1" SourceUrl="http://gdpr.dijitalizin.com/OtpService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OtpService1.xsd" MetadataType="Schema" ID="a5b12f09-f767-4b89-be8c-75f107163747" SourceId="1" SourceUrl="http://gdpr.dijitalizin.com/OtpService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OtpService.wsdl" MetadataType="Wsdl" ID="a4e28844-799c-4bff-af76-73685c0f6121" SourceId="1" SourceUrl="http://gdpr.dijitalizin.com/OtpService.svc?wsdl" />
+    <MetadataFile FileName="OtpService.disco" MetadataType="Disco" ID="2ba18d97-476f-46ff-b812-4e7eaacb98f7" SourceId="1" SourceUrl="http://gdpr.dijitalizin.com/OtpService.svc?disco" />
+    <MetadataFile FileName="OtpService2.xsd" MetadataType="Schema" ID="2745451c-0227-432c-b12c-d046ffdc44f3" SourceId="1" SourceUrl="http://gdpr.dijitalizin.com/OtpService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OtpService3.xsd" MetadataType="Schema" ID="9eff5c74-4697-42f5-b616-4b8b9fba70fc" SourceId="1" SourceUrl="http://gdpr.dijitalizin.com/OtpService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA89810B-2BC3-4F20-BB2E-3C64049CB33D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UzmanCrm.CrmService.Domain</RootNamespace>
+    <AssemblyName>UzmanCrm.CrmService.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstraction\IEntity.cs" />
+    <Compile Include="Abstraction\IEntityT.cs" />
+    <Compile Include="Base\BaseSchema.cs" />
+    <Compile Include="Entity\CRM\BusinessUnit\Store.cs" />
+    <Compile Include="Entity\CRM\CardExceptionDiscount\CardExceptionDiscount.cs" />
+    <Compile Include="Entity\CRM\CardTypeDefinition\CardTypeDefiniton.cs" />
+    <Compile Include="Entity\CRM\Contact\CustomerPermission.cs" />
+    <Compile Include="Entity\CRM\Contact\DataSource.cs" />
+    <Compile Include="Entity\CRM\Contact\Email.cs" />
+    <Compile Include="Entity\CRM\Contact\Phone.cs" />
+    <Compile Include="Entity\CRM\CustomerEndorsement\CustomerEndorsement.cs" />
+    <Compile Include="Entity\CRM\CustomerGroup\CustomerGroup.cs" />
+    <Compile Include="Entity\CRM\Adress\City.cs" />
+    <Compile Include="Entity\CRM\Adress\Address.cs" />
+    <Compile Include="Entity\CRM\Adress\Country.cs" />
+    <Compile Include="Entity\CRM\Adress\District.cs" />
+    <Compile Include="Entity\CRM\Adress\Neighborhood.cs" />
+    <Compile Include="Entity\CRM\BusinessUnit\BusinessUnit.cs" />
+    <Compile Include="Entity\CRM\HelperEntity\Campaign\Campaign.cs" />
+    <Compile Include="Entity\CRM\HelperEntity\Contact\Old_CustomerPermission.cs" />
+    <Compile Include="Entity\CRM\HelperEntity\Contact\Old_Email.cs" />
+    <Compile Include="Entity\CRM\Login\ApiUserLogin.cs" />
+    <Compile Include="Entity\CRM\HelperEntity\Contact\Old_Phone.cs" />
+    <Compile Include="Entity\CRM\HelperEntity\Contact\Sms.cs" />
+    <Compile Include="Entity\CRM\LoyaltyCardClassSegment\CardClasssegment.cs" />
+    <Compile Include="Entity\CRM\LoyaltyCard\LoyaltyCard.cs" />
+    <Compile Include="Entity\CRM\Test\DataTest.cs" />
+    <Compile Include="Entity\CRM\Contact\Contact.cs" />
+    <Compile Include="Entity\CRM\HelperEntity\User\Old_PortalUser.cs" />
+    <Compile Include="Entity\CRM\User\Employee.cs" />
+    <Compile Include="Entity\CRM\WageScale\WageScale.cs" />
+    <Compile Include="Entity\CRM\WageScale\CustomerWageScale.cs" />
+    <Compile Include="Entity\ExampleEntity.cs" />
+    <Compile Include="Entity\NotifyUrl\NotifyUrl.cs" />
+    <Compile Include="Entity\OVM\Customer.cs" />
+    <Compile Include="Entity\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

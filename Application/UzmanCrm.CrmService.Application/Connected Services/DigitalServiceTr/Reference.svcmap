@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ca877404-6dd8-412c-a722-648341f751ba" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://udi.dijitalizin.com/OtpService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="OtpService.xsd" MetadataType="Schema" ID="a2286b2c-b229-4916-a467-650c0c1669d3" SourceId="1" SourceUrl="http://udi.dijitalizin.com/OtpService.svc?xsd=xsd1" />
+    <MetadataFile FileName="OtpService1.xsd" MetadataType="Schema" ID="bbf4ff5d-d61e-4df8-b12e-7fdfec4fdd62" SourceId="1" SourceUrl="http://udi.dijitalizin.com/OtpService.svc?xsd=xsd0" />
+    <MetadataFile FileName="OtpService2.xsd" MetadataType="Schema" ID="ddc56cff-f154-4e54-a081-be72da8885e0" SourceId="1" SourceUrl="http://udi.dijitalizin.com/OtpService.svc?xsd=xsd3" />
+    <MetadataFile FileName="OtpService3.xsd" MetadataType="Schema" ID="5b742f3a-803d-4b5b-81e0-3bf81ca378c5" SourceId="1" SourceUrl="http://udi.dijitalizin.com/OtpService.svc?xsd=xsd2" />
+    <MetadataFile FileName="OtpService.wsdl" MetadataType="Wsdl" ID="ba52f145-7c35-4712-ab19-d82b25329613" SourceId="1" SourceUrl="http://udi.dijitalizin.com/OtpService.svc?wsdl" />
+    <MetadataFile FileName="OtpService.disco" MetadataType="Disco" ID="0aaf3c8b-c952-462a-a756-19a79e3b00bb" SourceId="1" SourceUrl="http://udi.dijitalizin.com/OtpService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

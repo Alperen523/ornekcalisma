@@ -1,0 +1,245 @@
+﻿@model UzmanCrm.CrmService.WebUI.Models.PortalUserRequestViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Kart İndirim Talep Formu</title>
+
+    <link href="~/Content/Styles/bootstrap.min.css" rel="stylesheet" />
+    @*<link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />*@
+    <link href="../Scripts/datatables.min.css" rel="stylesheet" />
+    <link href="../Content/Custom/css/Card/card-exception-discount.css" rel="stylesheet" />
+    <link href="~/Scripts/sweetalert2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <div class="card container">
+            <div class="card-header">
+                Kart İndirim Talep Formu
+            </div>
+            @if (Model.IsExist)
+            {
+                <div class="card-exception-status">
+                    ONAYLANAN VEYA ONAY BEKLEYEN TALEBİNİZ BULUNMAKTADIR.
+                </div>
+            }
+            else
+            {
+                <div class="jumbotron1">
+                    <!-- <h1 class="display-4">Suwen</h1> -->
+                    <p class="lead text-center">"Üst Yönetime Gönderilecek Olan İlgili Alanları ve Açıklamayı Doldurunuz."</p>
+                    <!-- <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+                </div>
+            }
+
+            <hr class="my-1">
+
+            <div class="card-body">
+                <form class="registration-form" method="post" id="RegisterForm">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Talepte Bulunan Id" value="" id="DemandedUserId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Onaylayacak Id" value="" id="ApprovingSuperVisorId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Kart Id" value="" id="LoyaltyCardId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Portal Kullanıcı Id" value="@Model.PortalUserId" id="PortalUserId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Portal Erp Id" value="@Model.PortalErpId" id="PortalErpId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Kart İndirim Id" value="" id="CardDiscountId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Mağaza Tipi" value="" id="OrganizationId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Business Unit Id" value="" id="BusinessUnitId" hidden readonly>
+                    </div>
+
+                    <!--Modal-->
+                    <div class="col col-modal">
+                        <input type="text" class="form-control" placeholder="Müşteri Ara" data-bs-toggle="modal" data-bs-target="#customerSearchModal" hidden>
+                    </div>
+                    <!--Modal-->
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputCustomerName">Müşteri Adı</label>
+                            <input type="text" class="form-control" placeholder="Müşteri Adı" value="" id="CustomerName" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="TodaysDate">Talep Tarihi</label>
+                            <input type="text" class="form-control" id="TodaysDate" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputDemandedUserName">Talepte Bulunan</label>
+                            <input type="text" class="form-control" placeholder="Talep Eden" id="DemandedUserName" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="inputCustomerErpId">Erp Id</label>
+                            <input type="text" class="form-control" placeholder="Erp Id" value="" id="CustomerErpId" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputAddresss">
+                                Müşteri Cep Numarası
+                                <a href="" id="customerPhoneClick"><i class="fas fa-save"></i></a>
+                            </label>
+                            <input type="text" class="form-control IsTypeP" maxlength="15" placeholder="(5xx) xxx-xx-xx" value="" id="CustomerPhone" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="inputCustomerCardNumber">Kart Numarası</label>
+                            <input type="text" class="form-control" placeholder="Kart Numarası" value="" id="CustomerCardNumber" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputValidationRate">Mevcut Oran</label>
+                            <input type="number" class="form-control" placeholder="-" value="" id="ValidDiscountRate" readonly>
+                        </div>
+
+                        <div class="col">
+                            <label for="inputDiscountRate">Talep Edilen Yeni Oran <span class="required-indicator">*</span></label>
+                            <input type="number" class="form-control" placeholder="-" id="DiscountRate" name="DiscountRate" min="0" max="50" required />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEndDate">İndirim Oranı Bitiş Tarihi <span class="required-indicator">*</span></label>
+                            <input type="date" class="form-control" id="EndDate" name="EndDate" required />
+                        </div>
+                        <div class="col">
+                            <label for="inputState">Üst Yönetim Komitesine Gönderilecek Talep Sebebi <span class="required-indicator">*</span></label>
+                            <select class="form-control" id="CustomerGroupId" required>
+                                <option label="Seçiniz"></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputTurnOverEndorsement">Müşteri Bir Önceki Yıl Toplam Alışveriş Tutarı</label>
+                            <input type="text" class="form-control" placeholder="-" value="" id="TurnOverEndorsement" readonly>
+                        </div>
+
+                        <div class="col">
+                            <label for="inputValidEndorsement">Müşteri Mevcut Yıl Toplam Alışveriş Tutarı</label>
+                            <input type="text" class="form-control" placeholder="-" value="" id="PeriodEndorsement" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col" hidden>
+                            <label for="inputCardClassSegment" id="LableCardClassSegment">Kart Sınıfı</label>
+                            <select id="CardClassSegmentId" class="form-control" disabled>
+                                <option label="Seçiniz" selected></option>
+                            </select>
+                        </div>
+                        <div class="col" hidden>
+                            <label for="inputApprovedBy" id="LabelApprovalBy">Onaylayacak Kişi</label>
+                            <input type="text" class="form-control" placeholder="" id="ApprovedBy" readonly>
+                        </div>
+                    </div>
+
+                    @if (!Model.IsExist)
+                    {
+                        <div class="col">
+                            <label class="mt-4" for="inputDescription">Üst Yönetim Komitesine Gönderilecek Açıklama<span class="required-indicator">*</span></label>
+                            <textarea type="text" class="form-control" maxlength="250" id="Description" name="Description" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success btn-lg" id="SubmitForm">Kaydet</button>
+                    }
+                </form>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="customerSearchModal" tabindex="-1" aria-labelledby="customerSearchModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="customerSearchModalLabel">Müşteri Ara</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="row row-modal">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Erp Id" id="ErpId">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Kart Numarası" id="CardNo">
+                                </div>
+                            </div>
+
+                            <div class="row row-modal">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Telefon Numarası" id="MobilePhone">
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Email Adresi" id="EmailAddress1">
+                                </div>
+                            </div>
+
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                            <button type="button" class="btn btn-success" id="CustomerSearchBtn">Ara</button>
+                        </div>
+                        <div class="modal-footer">
+
+                            <table class="table table-striped display nowrap" id="CustomerTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Ad-Soyad</th>
+                                        <th>Telefon No</th>
+                                        <th>Email</th>
+                                        <th>Kart Numarası</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+
+            <div class="card-footer text-muted">
+                @*© 2022 - Vakko - Müşteri Asistanım*@
+            </div>
+        </div>
+    </div>
+
+    <!--Scripts-->
+    <script src="../Content/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="../Content/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/jquery.dataTables.min.js"></script>
+    <script src="~/Scripts/sweetalert2.min.js"></script>
+    @*<script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>*@
+    @*<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>*@
+    <script src="../Content/Custom/js/Card/card-exception-discount.js"></script>
+    <script src="../Content/Scripts/jquery.validate.min.js"></script>
+    <!--Scripts-->
+
+</body>
+</html>

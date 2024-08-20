@@ -1,0 +1,152 @@
+//CREATE TABLE [dbo].[CrmService](
+//	[Id] [int] IDENTITY(1,1) NOT NULL,
+//	[InstanceId] [nvarchar](40) NULL,
+//	[Date] [datetime] NULL,
+//	[Level] [nvarchar](500) NULL,
+//	[Message] [nvarchar](max) NULL,
+//	[MachineName] [nvarchar](300) NULL,
+//	[Ipaddress] [nvarchar](30) NULL,
+//	[Macaddress] [nvarchar](500) NULL,
+//	[Organization] [nvarchar](100) NULL,
+//	[Logger] [nvarchar](500) NULL,
+//	[Methodname] [nvarchar](500) NULL,
+//	[Type] [nvarchar](100) NULL,
+// CONSTRAINT [PK__CrmService__3214EC074532B342] PRIMARY KEY CLUSTERED 
+//(
+//	[Id] ASC
+//)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, FILLFACTOR = 70) ON [PRIMARY]
+//) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+//GO
+
+
+//getLoyaltyCardRevenue;
+
+//http://195.87.102.55:8888/vakko-estore/api/card/revenue?ErpChannelId=2&ErpCustomerId=2790443
+
+//Response;
+//{
+//    "CardType": "string",
+//  "Revenue": 0,
+//  "RevenueType": 0,
+//  "DiscountPercent": 0,
+//  "AmountForUpperSegment": 0,
+//  "DiscountPercentForUpperSegment": 0
+//}
+
+
+//getLoyaltyCard;
+
+//Request;
+//{
+//  "cardNo": 6131571000307482,
+//  "erpId": 0
+//}
+
+//Response;
+//{
+//    "error": false,
+//  "message": "Successful",
+//  "loyaltyInfos": {
+//        "erpId": "2790443",
+//    "cardBlocked": null,
+//    "cardStatus": "KULLANIMDA",
+//    "cardNo": 6131571000307482,
+//    "cardType": "VAKKO KART",
+//    "discountRate": 0,
+//    "cardRatio": null,
+//    "totalEarnedPoint": 0,
+//    "totalSpentPoint": 0,
+//    "currentPoint": 0,
+//    "cardStartDate": "22/03/2020",
+//    "totalPeriodicEndorsement": 0,
+//    "transferEndorsement": 0,
+//    "initialEndorsement": 0,
+//    "registry": "99999 - GENEL SİCİL",
+//    "state": "S",
+//    "updateDate": "22/03/2020 05:21:27",
+//    "firstDate": "01/01/2022",
+//    "oldRecords": null,
+//    "endorsementRatios": [
+//      {
+//            "storeType": "VAKKO MAĞAZA",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "VAKKO BUTİK",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "VAKKORAMA",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "VAKKORAMA H2O",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "W COLLECTION",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "TEKSTİL TOPTAN",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "VAKKO İNDİRİM",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "VAKKORAMA V2K",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "VAKKO + VAKKORAMA",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "PRONOVİAS",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "HARTFORD",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "RM",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "E-SATIŞ",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "CHRISTOFLE",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "CRUISE",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "TEST",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "VAKKO GIDA",
+//        "endorsmentRatio": 0
+//      },
+//      {
+//            "storeType": "VAKKO 365",
+//        "endorsmentRatio": 0
+//      }
+//    ]
+//  }
+//}
+
+
+
+
+
+//Yapılan Testler
+
+//1- NodeJs modülü ile asenkron 1000 adet ciro kaydetme işlemi ; Request : 0.5 ms Response : 2.01 dk

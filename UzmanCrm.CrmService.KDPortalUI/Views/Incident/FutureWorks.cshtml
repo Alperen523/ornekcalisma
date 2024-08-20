@@ -1,0 +1,372 @@
+@{
+    ViewBag.Title = "FutureWorks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <base href="../" />
+    <title>Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
+    <meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes" />
+    <meta property="og:url" content="https://keenthemes.com/metronic" />
+    <meta property="og:site_name" content="Metronic by Keenthemes" />
+    <link rel="canonical" href="http://preview.keenthemes.comdashboards/ecommerce.html" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <!--begin::Fonts(mandatory for all pages)-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Vendor Stylesheets(used for this page only)-->
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/vis-timeline/vis-timeline.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Vendor Stylesheets-->
+    <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Stylesheets Bundle-->
+    <script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+</head>
+<body>
+
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <!--begin::Page title-->
+
+            <h1 class="d-flex align-items-lg-end text-white-900 fw-bold my-1 fs-3">Talep Detayi</h1>
+
+            <!--end::Page title-->
+            <!--begin::Actions-->
+
+            <div class="d-flex align-items-center py-1">
+
+                <div class="me-4">
+
+                </div>
+            </div>
+            <!--end::Wrapper-->
+            <!--end::Actions-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <div class="container-fluid">
+        <div class="card">
+
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label>Servis Talebi Basligi</label>
+                            <input type="text" class="form-control" id="servisTalebiBasligi" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Kimlik</label>
+                            <input type="text" class="form-control" id="kimlikBilgisi" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Musteri</label>
+                            <input type="text" class="form-control" id="musteriBilgisi" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Talep Turu</label>
+                            <input type="text" class="form-control" id="talepTuru" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Ana Talep Konusu</label>
+                            <input type="text" class="form-control" id="anaTalepKonusu" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Alt Talep Konusu</label>
+                            <input type="text" class="form-control" id="altTalepKonusu" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Alt Talep Konu Detayi</label>
+                            <input type="text" class="form-control" id="altTalepKonuDetayi" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Kaynak</label>
+                            <input type="text" class="form-control" id="kaynakBilgisi" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Urun</label>
+                            <input type="text" class="form-control" id="urunBilgisi" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>urun Puani</label>
+                            <input type="text" class="form-control" id="urunPuani" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>urun Sikayet Detayi</label>
+                            <input type="text" class="form-control" id="urunSikayetDetayi" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Musteri Aciklama</label>
+                            <input type="text" class="form-control" id="musteriAciklama" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>UrunAdi</label>
+                            <input type="text" class="form-control" id="urun" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Geri Bildirim Tipi</label>
+                            <input type="text" class="form-control" id="geriBildirimTipi" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Paketleme Puani</label>
+                            <input type="text" class="form-control" id="paketlemePuani" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Teslimat Hiz Puani</label>
+                            <input type="text" class="form-control" id="teslimatHizpuani" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Personel Puani</label>
+                            <input type="text" class="form-control" id="personelPuani" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Temizlik Puani</label>
+                            <input type="text" class="form-control" id="temizlikPuani" disabled>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Servis Hiz Puani</label>
+                            <input type="text" class="form-control" id="servisHizPuani" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-4">
+            <div class="card-body">
+                <h3 class="section-title">Talep Detaylari</h3>
+                <div class="form-group">
+                    <label>Aciklamalar</label>
+                    <textarea class="form-control" rows="4" disabled>ilgili sikayet cozume ulastirildi.</textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+
+
+<div class="col-xl-8 mb-5 mb-xl-10">
+    <!--begin::Table Widget 4-->
+    <div class="card card-flush h-xl-100" style="max-height: 500px; width:150%; overflow-y: auto;">
+        <!--begin::Card header-->
+        <div class="card-header pt-7">
+            <!--begin::Title-->
+            <h3 class="card-title align-items-start flex-column">
+                <span class="card-label fw-bold text-gray-800">GOREVLER</span>
+            </h3>
+            <!--end::Title-->
+            <!--begin::Actions-->
+            <div class="card-toolbar">
+                <!--begin::Filters-->
+                <div class="d-flex flex-stack flex-wrap gap-4">
+                    <!--begin::Status-->
+                    <div class="d-flex align-items-center fw-bold">
+                        <!--begin::Label-->
+                        <div class="text-gray-500 fs-7 me-2">Status</div>
+                        <!--end::Label-->
+                        <!--begin::Select-->
+                        <select class="form-select form-select-transparent text-gray-900 fs-7 lh-1 fw-bold py-0 ps-3 w-auto" data-control="select2" data-hide-search="true" data-dropdown-css-class="w-150px" data-placeholder="Select an option" data-kt-table-widget-4="filter_status">
+                            <option></option>
+                            <option value="Show All" selected="selected">Show All</option>
+                            <option value="Shipped">Yapiliyor</option>
+                            <option value="Confirmed">Tamamlandi</option>
+                            <option value="Rejected">Yapilmadi</option>
+                        </select>
+                        <!--end::Select-->
+                    </div>
+                    <!--end::Status-->
+                    <!--begin::Actions-->
+                    <!--begin::Search-->
+                    <div class="position-relative my-1">
+                        <i class="ki-outline ki-magnifier fs-2 position-absolute top-50 translate-middle-y ms-4"></i>
+                        <input type="text" data-kt-table-widget-4="search" class="form-control w-150px fs-7 ps-12" placeholder="Search" />
+                    </div>
+                    <!--end::Search-->
+                </div>
+                <!--begin::Filters-->
+            </div>
+            <!--end::Actions-->
+        </div>
+        <!--end::Card header-->
+        <!--begin::Card body-->
+        <div class="card-body pt-2">
+            <!--begin::Table-->
+            <table class="table align-middle table-row-dashed fs-6 gy-3" id="kt_table_widget_4_table">
+                <!--begin::Table head-->
+                <thead>
+                    <!--begin::Table row-->
+                    <tr class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
+                        <th class="text-start min-w-10px">Talep</th>
+                        <th class="text-end min-w-125px">Atanacak Takim</th>
+                        <th class="text-end min-w-100px">Gorev Aciklamasi</th>
+                        <th class="text-end min-w-100px">Cozum Aciklamasi</th>
+                        <th class="text-end min-w-50px">Olusturma Tarihi</th>
+                        <th class="text-end min-w-50px">Gorev Durumu</th>
+                        <th class="text-end"></th>
+                    </tr>
+                    <!--end::Table row-->
+                </thead>
+                <!--end::Table head-->
+                <!--begin::Table body-->
+
+                <tr>
+                    <td>    
+                        <a href="/Incident/GetList" class="text-gray-800 text-hover-primary">#XGY-346</a>
+                    </td>
+                    <td class="text-end">7 min ago</td>
+                    <td class="text-end">
+                        <a href="#" class="text-gray-600 text-hover-primary">Albert Flores</a>
+                    </td>
+                    <td class="text-end">$630.00</td>
+                    <td class="text-end">
+                        <span class="text-gray-800 fw-bolder">$86.70</span>
+                    </td>
+                    <td class="text-end">
+                        <span class="badge py-3 px-4 fs-7 badge-light-warning">Yapiliyor</span>
+                    </td>
+                    <td class="text-end">
+                        <!--begin::Filter-->
+                        <div class="d-flex my-4">
+                            <a href="#" class="btn btn-sm btn-primary me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_offer_a_deal">Duzenle</a>
+                        </div>
+                        <!--end::Filter-->
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="apps/ecommerce/catalog/edit-product.html" class="text-gray-800 text-hover-primary">#YHD-047</a>
+                    </td>
+                    <td class="text-end">52 min ago</td>
+                    <td class="text-end">
+                        <a href="#" class="text-gray-600 text-hover-primary">Jenny Wilson</a>
+                    </td>
+                    <td class="text-end">$25.00</td>
+                    <td class="text-end">
+                        <span class="text-gray-800 fw-bolder">$4.20</span>
+                    </td>
+                    <td class="text-end">
+                        <span class="badge py-3 px-4 fs-7 badge-light-primary">Tamamlandi</span>
+                    </td>
+                    <td class="text-end">
+                        <!--begin::Filter-->
+                        <div class="d-flex my-4">
+
+
+                            <a href="#" class="btn btn-sm btn-primary me-3" data-bs-toggle="modal" data-bs-target="#kt_modal_offer_a_deal">Duzenle</a>
+                        </div>
+                        <!--end::Filter-->
+                </tr>
+                </tbody>
+                <!--end::Table body-->
+            </table>
+            <!--end::Table-->
+        </div>
+        <!--end::Card body-->
+    </div>
+    <!--end::Table Widget 4-->
+</div>
+
+<div class="modal fade" id="kt_modal_offer_a_deal" tabindex="-1" aria-hidden="true">
+    <!--begin::Modal dialog-->
+    <div class="modal-dialog modal-dialog-centered mw-1000px">
+        <!--begin::Modal content-->
+        <div class="modal-content">
+            <!--begin::Modal header-->
+            <div class="modal-header py-7 d-flex justify-content-between">
+                <!--begin::Modal title-->
+                <h2>Gorev Detayi</h2>
+                <!--end::Modal title-->
+                <!--begin::Close-->
+                <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+                    <i class="ki-outline ki-cross fs-1"></i>
+                </div>
+                <!--end::Close-->
+            </div>
+            <!--begin::Modal header-->
+            <!--begin::Modal body-->
+            <div class="modal-body scroll-y m-5">
+                <!--begin::Stepper-->
+                <div class="stepper stepper-links d-flex flex-column" id="kt_modal_offer_a_deal_stepper">
+                    <!--begin::Nav-->
+                    <div class="stepper-nav justify-content-center py-2">
+                        <!--begin::Step 1-->
+                        <div class="stepper-item me-5 me-md-15 current" data-kt-stepper-element="nav">
+                            <h3 class="stepper-title">Duzenle</h3>
+                        </div>
+                        <!--end::Step 1-->
+
+                    </div>
+                    <!--end::Nav-->
+                    <!--begin::Form-->
+                    <form class="dropdown-menu-xl-start " novalidate="novalidate" id="kt_modal_offer_a_deal_form">
+                        <!--begin::Type-->
+                        <div class="current" data-kt-stepper-element="content">
+                            <!--begin::Wrapper-->
+                            <div class="w-100">
+                                <!--begin::Heading-->
+                                <div class="mb-13">
+                                    <!--begin::Title-->
+                                    <h2 class="mb-3">Gorevi Duzenle</h2>
+                                    <!--end::Title-->
+                                </div>
+                                <!--end::Heading-->
+                                <!--begin::Input group-->
+                                <!--begin::Descriptions-->
+                                <div class="form-group">
+                                    <label>Konu</label>
+                                    <input type="text" class="form-control" id="gorevKonu" disabled>
+                                </div>
+                                <div class="form-group">
+                                    <label>Sahibi</label>
+                                    <input type="text" class="form-control" id="gorevSahibi" disabled>
+                                </div>
+
+
+                                <div class="fv-row mb-15" data-kt-buttons="true">
+                                    <div class="card mt-4" style="border: none; box-shadow: none;">
+                                        <div class="card-body" style="display: flex; flex-direction: column; align-items: flex-start; padding: 0;">
+                                            <div class="form-group" style="width: 220px; margin-bottom: 5px;">
+                                                <a>Aciklama</a>
+                                                <textarea class="form-control" rows="4" style="width: 100%;"></textarea>
+                                            </div>
+                                            <div class="form-group" style="width: 220px;">
+                                                <a>Cozum Aciklamasi</a>
+                                                <textarea class="form-control" rows="4" style="width: 100%;"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--end:Descriptions-->
+
+                                </div>
+                                <!--end::Input group-->
+                            </div>
+                            <!--end::Wrapper-->
+                        </div>
+                    </form>
+                    <!--end::Form-->
+                </div>
+                <!--end::Stepper-->
+            </div>
+            <!--begin::Modal body-->
+        </div>
+    </div>
+</div>
+
+
+
+

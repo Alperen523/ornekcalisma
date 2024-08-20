@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://gdpr.dijitalizin.com/OtpService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DataLayer.Entites" />
+  <xs:element name="SendOtp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DataLayer.Entites" minOccurs="0" name="otpmodel" nillable="true" type="q1:SendOtpModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendOtpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DataLayer.Entites" minOccurs="0" name="SendOtpResult" nillable="true" type="q2:SendOtpResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOtp">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DataLayer.Entites" minOccurs="0" name="checkmodel" nillable="true" type="q3:CheckOtpModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckOtpResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DataLayer.Entites" minOccurs="0" name="CheckOtpResult" nillable="true" type="q4:CheckOtpResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDigitalFormWithDoubleOptin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DataLayer.Entites" minOccurs="0" name="model" nillable="true" type="q5:AddDigitalFormWithDoubleOptinModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddDigitalFormWithDoubleOptinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DataLayer.Entites" minOccurs="0" name="AddDigitalFormWithDoubleOptinResult" nillable="true" type="q6:AddDigitalFormResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDigitalFormProof">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DataLayer.Entites" minOccurs="0" name="model" nillable="true" type="q7:GetProofModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDigitalFormProofResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/DataLayer.Entites" minOccurs="0" name="GetDigitalFormProofResult" nillable="true" type="q8:GetProofResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

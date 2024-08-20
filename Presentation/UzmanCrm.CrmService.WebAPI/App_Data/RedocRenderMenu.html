@@ -1,0 +1,37 @@
+
+# Giriş
+          Bu dokümanda Vakko için sunulan API'nin açıklamaları, güvenlik kısıtları ve kullanım örnekleri sunulmaktadır. </br></br>
+          API (Application Programming Interface), farklı yazılım uygulamalarının birbirleriyle etkileşime geçmelerine olanak sağlayan servis çözümüdür.</br>
+		  API'nin sunumunda amaç; Entegratörler için Vakko hizmetlerine erişim ve tümleşim ortamı sağlamaktır.</br></br>
+          Tüm metotların HTTP istek ve cevap mesajlarında <code>JSON</code> söz dizim standardı kullanılmıştır.</br>
+          Güvenli API'lerin erişiminde HTTP Authorization protokolü takip edilmektedir. Bu doğrultuda **Login > Authenticate** metodu ile alınan Token ile diğer metotlarla güvenli veri alışverişi sağlanmaktadır.</br>            
+          **Test Ortamı** </br>
+          Link= http://crmapi-test.vakko.com.tr </br></br>
+          **Canlı Ortam** </br>
+          Link= http://crmapi.vakko.com.tr </br>
+          <p style='color: red'>Authorization işlemi için yetkililerden Username ve Password bilgisi alınmalıdır. </p>
+
+# Hata Kodları
+         API isteklerinde cevap olarak dönülen hataların kodlarına ve hata mesajlarına bu bölümde ulaşabilirsiniz.</br></br>
+        <table>
+          <tr>
+            <th>Hata Kodu</th>
+            <th>Açıklama</th>
+          </tr>
+          <tr>
+            <td>L001</td>
+            <td>Api Kullanıcı bilgileri hatalı</td>
+          </tr>
+          <tr>
+            <td>V001</td>
+            <td>Validation model error</td>
+          </tr>
+          <tr>
+            <td>V002</td>
+            <td>Veri bulunamadı</td>
+          </tr>
+          <tr>
+            <td>V003</td>
+            <td>Sunucu hatası</td>
+          </tr>
+        </table>

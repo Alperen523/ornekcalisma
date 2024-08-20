@@ -1,0 +1,317 @@
+﻿
+@{
+    ViewBag.Title = "GetList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <base href="../" />
+    <title>Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
+    <meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes" />
+    <meta property="og:url" content="https://keenthemes.com/metronic" />
+    <meta property="og:site_name" content="Metronic by Keenthemes" />
+    <link rel="canonical" href="http://preview.keenthemes.comdashboards/ecommerce.html" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <!--begin::Fonts(mandatory for all pages)-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Vendor Stylesheets(used for this page only)-->
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/vis-timeline/vis-timeline.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Vendor Stylesheets-->
+    <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Stylesheets Bundle-->
+    <script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+</head>
+<div class="card mb-5 mb-xl-10">
+    <!--begin::Card header-->
+    <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+            <div class="toolbar" id="kt_toolbar">
+                <!--begin::Container-->
+                <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+                    <!--begin::Page title-->
+
+                    <h1 class="d-flex align-items-lg-end text-white-900 fw-bold my-1 fs-3">Müşteri Detayı</h1>
+
+                    <!--end::Page title-->
+                    <!--begin::Actions-->
+
+                    <div class="d-flex align-items-center py-1">
+
+                        <div class="me-4">
+
+                        </div>
+                    </div>
+                    <!--end::Wrapper-->
+                    <!--end::Actions-->
+                </div>
+                <!--end::Container-->
+            </div>
+</div>
+    <!--begin::Card header-->
+    <!--begin::Content-->
+    <div id="kt_account_settings_profile_details" class="collapse show">
+        <!--begin::Form-->
+        <form id="kt_account_profile_details_form" class="form">
+            <!--begin::Card body-->
+            <div class="card-body border-top p-9">
+                <!--begin::Input group-->
+                <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Müşteri Tipi</label>
+                    <!--end::Label-->
+                    <!--begin::Col-->
+                    <div class="col-lg-8 fv-row">
+                        <input type="text" name="customerType" class="form-control form-control-lg form-control-solid" placeholder="MusteriTipi" value="TestTip" />
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+                <!--begin::Input group-->
+                <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">Tam İsmi</label>
+                    <!--end::Label-->
+                    <!--begin::Col-->
+                    <div class="col-lg-8">
+                        <!--begin::Row-->
+                        <div class="row">
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <input type="text" name="fname" class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="First name" value="Max" />
+                            </div>
+                            <!--end::Col-->
+                            <!--begin::Col-->
+                            <div class="col-lg-6 fv-row">
+                                <input type="text" name="lname" class="form-control form-control-lg form-control-solid" placeholder="Last name" value="Smith" />
+                            </div>
+                            <!--end::Col-->
+                        </div>
+                        <!--end::Row-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+                <!--begin::Input group-->
+                <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">
+                        <span class="required">Cinsiyet</span>
+                        <span class="ms-1" data-bs-toggle="tooltip" title="Musteri Cinsiyeti">
+                            <i class="ki-outline ki-information-5 text-gray-500 fs-6"></i>
+                        </span>
+                    </label>
+                    <!--end::Label-->
+                    <!--begin::Col-->
+                    <div class="col-lg-8 fv-row">
+                        <!--begin::Input-->
+                        <select name="cinsiyet" aria-label="Cinsiyetinizi Seciniz" data-control="select2" data-placeholder="Cinsiyet secimi" class="form-select form-select-solid form-select-lg">
+                            <option value="">Cinsiyetinizi Secin...</option>
+                            <option value="M">Erkek</option>
+                            <option value="F">Kadın</option>
+
+                        </select>
+                        <!--end::Input-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+                <!--begin::Input group-->
+                <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">E-posta</label>
+                    <!--end::Label-->
+                    <!--begin::Col-->
+                    <div class="col-lg-8 fv-row">
+                        <input type="text" name="mail" class="form-control form-control-lg form-control-solid" placeholder="Email" value="example@example.com" />
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+                <!--begin::Input group-->
+                <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">Telefon Numarası</label>
+                    <!--end::Label-->
+                    <!--begin::Col-->
+                    <div class="col-lg-8 fv-row">
+                        <input type="text" name="phone" class="form-control form-control-lg form-control-solid" placeholder="MobilePhone" value="55544455588" />
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+                <!--begin::Input group-->
+                <div class="row mb-6">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label required fw-semibold fs-6">İzinler</label>
+                    <!--end::Label-->
+                    <!--begin::Col-->
+                    <div class="col-lg-8 fv-row">
+                        <!--begin::Options-->
+                        <div class="d-flex align-items-center mt-3">
+                            <!--begin::Option-->
+                            <label class="form-check form-check-custom form-check-inline form-check-solid me-5">
+                                <input class="form-check-input" name="communication[]" type="checkbox" value="1" />
+                                <span class="fw-semibold ps-2 fs-6">Email</span>
+                            </label>
+                            <!--end::Option-->
+                            <!--begin::Option-->
+                            <label class="form-check form-check-custom form-check-inline form-check-solid">
+                                <input class="form-check-input" name="communication[]" type="checkbox" value="2" />
+                                <span class="fw-semibold ps-2 fs-6">Sms</span>
+                            </label>
+                            <!--end::Option-->
+                        </div>
+                        <!--end::Options-->
+                    </div>
+                    <!--end::Col-->
+                </div>
+                <!--end::Input group-->
+                <!--begin::Input group-->
+                <div class="row mb-0">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">Arama İzni</label>
+                    <!--begin::Label-->
+                    <!--begin::Label-->
+                    <div class="col-lg-8 d-flex align-items-center">
+                        <div class="form-check form-check-solid form-switch form-check-custom fv-row">
+                            <input class="form-check-input w-45px h-30px" type="checkbox" id="allowCall" checked="checked" />
+                            <label class="form-check-label" for="allowCall"></label>
+                        </div>
+                    </div>
+                    <!--begin::Label-->
+                </div>
+                <!--end::Input group-->
+                <!--begin::Input group-->
+                <div class="row mb-0">
+                    <!--begin::Label-->
+                    <label class="col-lg-4 col-form-label fw-semibold fs-6">KVKK İzni</label>
+                    <!--begin::Label-->
+                    <!--begin::Label-->
+                    <div class="col-lg-8 d-flex align-items-center">
+                        <div class="form-check form-check-solid form-switch form-check-custom fv-row">
+                            <input class="form-check-input w-45px h-30px" type="checkbox" id="allowKVKK" checked="checked" />
+                            <label class="form-check-label" for="allowKVKK"></label>
+                        </div>
+                    </div>
+                    <!--begin::Label-->
+                </div>
+                <!--end::Input group-->
+            </div>
+                <!--end::Card body-->
+                <!--begin::Actions-->
+                <div class="card-footer d-flex justify-content-end py-6 px-9">
+                    <button type="reset" class="btn btn-light btn-active-light-primary me-2">Discard</button>
+                    <button type="submit" class="btn btn-primary" id="kt_account_profile_details_submit">Save Changes</button>
+                </div>
+                <!--end::Actions-->
+</form>
+        <!--end::Form-->
+    </div>
+    <!--end::Content-->
+</div>  
+
+<div class="col-xl-8 mb-5 mb-xl-10">
+    <!--begin::Table Widget 4-->
+    <div class="card card-flush h-xl-100" style="max-height: 500px; width:150%; overflow-y: auto;">
+        <!--begin::Card header-->
+        <div class="card-header pt-7">
+            <!--begin::Title-->
+            <h3 class="card-title align-items-start flex-column">
+                <span class="card-label fw-bold text-gray-800">Talepler</span>
+            </h3>
+            <!--end::Title-->
+            <!--begin::Actions-->
+            <div class="card-toolbar">
+                <!--begin::Filters-->
+                <div class="d-flex flex-stack flex-wrap gap-4">
+                    <!--begin::Status-->
+                    <div class="d-flex align-items-center fw-bold">
+                        <!--begin::Label-->
+                        <div class="text-gray-500 fs-7 me-2">Status</div>
+                        <!--end::Label-->
+                        <!--begin::Select-->
+                        <select class="form-select form-select-transparent text-gray-900 fs-7 lh-1 fw-bold py-0 ps-3 w-auto" data-control="select2" data-hide-search="true" data-dropdown-css-class="w-150px" data-placeholder="Select an option" data-kt-table-widget-4="filter_status">
+                            <option></option>
+                            <option value="Show All" selected="selected">Hepsini Goster</option>
+                            <option value="Shipped">Yapılıyor</option>
+                            <option value="Confirmed">Tamamlandı</option>
+                            <option value="Rejected">Yapılmadı</option>
+                        </select>
+                        <!--end::Select-->
+                    </div>
+                    <!--end::Status-->
+                    <!--begin::Actions-->
+                    <!--begin::Search-->
+                    <div class="position-relative my-1">
+                        <i class="ki-outline ki-magnifier fs-2 position-absolute top-50 translate-middle-y ms-4"></i>
+                        <input type="text" data-kt-table-widget-4="search" class="form-control w-150px fs-7 ps-12" placeholder="Search" />
+                    </div>
+                    <!--end::Search-->
+                </div>
+                <!--begin::Filters-->
+            </div>
+            <!--end::Actions-->
+        </div>
+        <!--end::Card header-->
+        <!--begin::Card body-->
+        <div class="card-body pt-2">
+            <!--begin::Table-->
+            <table class="table align-middle table-row-dashed fs-6 gy-3" id="kt_table_widget_4_table">
+                <!--begin::Table head-->
+                <thead>
+                    <!--begin::Table row-->
+                    <tr class="text-start text-gray-500 fw-bold fs-7 text-uppercase gs-0">
+                        <th class="text-start min-w-10px">Talep Kodu</th>
+                        <th class="text-end min-w-125px">Talep Baslığı</th>
+                        <th class="text-end min-w-100px">Müşteri</th>
+                        <th class="text-end min-w-50px">Talep Durumu</th>
+                        <th class="text-end"></th>
+                    </tr>
+                    <!--end::Table row-->
+                </thead>
+                <!--end::Table head-->
+                <!--begin::Table body-->
+
+                <tr>
+                    <td>
+                        <a href="~/Incident/FutureWorks" class="text-gray-800 text-hover-primary">#XGY-346</a>
+                    </td>
+                    <td class="text-end">7 min ago</td>
+                    <td class="text-end">
+                        <a href="#" class="text-gray-600 text-hover-primary">Albert Flores</a>
+                    </td>
+                    <td class="text-end">
+                        <span class="badge py-3 px-4 fs-7 badge-light-warning">Yapılıyor</span>
+                    </td>
+                  
+                </tr>
+                <tr>
+                    <td>
+                        <a href="~/Incident/FutureWorks" class="text-gray-800 text-hover-primary">#YHD-047</a>
+                    </td>
+                    <td class="text-end">52 min ago</td>
+                    <td class="text-end">
+                        <a href="#" class="text-gray-600 text-hover-primary">Jenny Wilson</a>
+                    </td>
+                    <td class="text-end">
+                        <span class="badge py-3 px-4 fs-7 badge-light-primary">Tamamlandı</span>
+                    </td>
+                  
+                </tr>
+                </tbody>
+                <!--end::Table body-->
+            </table>
+            <!--end::Table-->
+        </div>
+        <!--end::Card body-->
+    </div>
+    <!--end::Table Widget 4-->
+</div>

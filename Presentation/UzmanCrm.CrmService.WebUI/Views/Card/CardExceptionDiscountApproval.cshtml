@@ -1,0 +1,165 @@
+﻿@model UzmanCrm.CrmService.WebUI.Models.CardExceptionApprovalRequestViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kart İndirim Talep Onay Formu</title>
+
+    <link href="~/Content/Styles/bootstrap.min.css" rel="stylesheet" />
+    <link href="//cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="../Content/Custom/css/Card/card-exception-discount-approval.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div>
+        <div class="card container">
+            <div class="card-header">
+                Kart İndirim Talep Onay Formu
+            </div>
+            <div class="card-body">
+                <form class="registration-form" method="post" id="RegisterForm">
+                    <div class="col">
+                        <input type="text" class="form-control" value="" id="DemandedUserId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" value="@Model.LoyaltyCardId" id="LoyaltyCardId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" value="" id="CardDiscountId" hidden readonly>
+                    </div>
+                    <div class="col">
+                        <input type="text" class="form-control" value="" id="OptionSetCustomerGroupId" hidden readonly>
+                    </div>
+                    <div>
+                        <select id="CardClassSegmentId" class="form-control" hidden>
+                            <option label="Seçiniz" selected></option>
+                        </select>
+                    </div>
+                    @if (Model.ApprovalStatus == 2)
+                    {
+                        <div class="card-exception-status">
+                            BU İNDİRİM TALEBİNİ REDDETTİNİZ.
+                        </div>
+                        <hr class="my-1">
+                    }
+                    @if (Model.ApprovalStatus == 3)
+                    {
+                        <div class="card-exception-status">
+                            BU İNDİRİM TALEBİNİ ONAYLADINIZ.
+                        </div>
+                        <hr class="my-1">
+                    }
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">Talep Eden Lokasyon</label>
+                            <input type="text" class="form-control" id="Store" value="@Model.DemandStore" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">Müşteri Adı</label>
+                            <input type="text" class="form-control" placeholder="Müşteri Adı" value="" id="CustomerName" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="TodaysDate">Talep Tarihi</label>
+                            <input type="text" class="form-control" id="TodaysDate" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">Talepte Bulunan</label>
+                            <input type="text" class="form-control" placeholder="Talep Eden" id="DemandedUserName" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="inputEmail4">Erp Id</label>
+                            <input type="text" class="form-control" placeholder="Erp Id" value="" id="CustomerErpId" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputAddresss">
+                                Müşteri Cep Numarası
+                                <a href="" id="customerPhoneClick"><i class="fa fa-phone"></i></a>
+                            </label>
+                            <input type="text" class="form-control IsTypeP" maxlength="15" placeholder="(5xx) xxx-xx-xx" value="" id="CustomerPhone" readonly>
+                        </div>
+                        <div class="col">
+                            <label for="inputEmail4">Kart Numarası</label>
+                            <input type="text" class="form-control" placeholder="Kart Numarası" value="" id="CustomerCardNumber" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">Mevcut Oran</label>
+                            <input type="number" class="form-control" placeholder="-" value="" id="ValidDiscountRate" readonly>
+                        </div>
+
+                        <div class="col">
+                            <label for="inputEmail4">Talep Edilen Yeni Oran <span class="required-indicator">*</span></label>
+                            <input type="number" class="form-control" placeholder="-" id="DiscountRate">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">İndirim Oranı Bitiş Tarihi <span class="required-indicator">*</span></label>
+                            <input type="date" class="form-control" id="EndDate">
+                        </div>
+                        <div class="col">
+                            <label for="inputState">Talep Sebebi <span class="required-indicator">*</span></label>
+                            <select class="form-control" id="CustomerGroupId" readonly>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">Müşteri Bir Önceki Yıl Toplam Alışveriş Tutarı</label>
+                            <input type="text" class="form-control" placeholder="-" value="" id="TurnOverEndorsement" readonly>
+                        </div>
+
+                        <div class="col">
+                            <label for="inputEmail4">Müşteri Mevcut Yıl Toplam Alışveriş Tutarı</label>
+                            <input type="text" class="form-control" placeholder="-" value="" id="ValidEndorsement" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputEmail4">Üst Yönetime Gönderilecek Açıklama<span class="required-indicator">*</span></label>
+                            <textarea type="text" class="form-control" id="Description" readonly></textarea>
+                        </div>
+                    </div>
+                    @if (Model.ApprovalStatus != 2 && Model.ApprovalStatus != 3)
+                    {
+                        <button type="button" class="btn btn-danger btn-lg" id="Decline">Reddet</button>
+                        <button type="button" class="btn btn-success btn-lg" id="Accept">Onayla</button>
+                    }
+                </form>
+            </div>
+
+            <div class="card-footer text-muted">
+                @*© 2022 - Vakko - Müşteri Asistanım*@
+            </div>
+        </div>
+    </div>
+
+
+    <!--Scripts-->
+    <script src="../Content/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="../Content/Scripts/moment.min.js"></script>
+    <script src="//cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../Content/Custom/js/Card/card-exception-discount-approval.js"></script>
+    <!--Scripts-->
+</body>
+</html>

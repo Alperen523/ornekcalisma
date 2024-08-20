@@ -1,0 +1,280 @@
+﻿<head>
+    <base href="../" />
+    <title>Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="The most advanced Bootstrap 5 Admin Theme with 40 unique prebuilt layouts on Themeforest trusted by 100,000 beginners and professionals. Multi-demo, Dark Mode, RTL support and complete React, Angular, Vue, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel versions. Grab your copy now and get life-time updates for free." />
+    <meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Express.js, Node.js, Flask, Symfony & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Metronic - The World's #1 Selling Bootstrap Admin Template by KeenThemes" />
+    <meta property="og:url" content="https://keenthemes.com/metronic" />
+    <meta property="og:site_name" content="Metronic by Keenthemes" />
+    <link rel="canonical" href="http://preview.keenthemes.comdashboards/ecommerce.html" />
+    <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+    <!--begin::Fonts(mandatory for all pages)-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+    <!--end::Fonts-->
+    <!--begin::Vendor Stylesheets(used for this page only)-->
+    <link href="assets/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/custom/vis-timeline/vis-timeline.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Vendor Stylesheets-->
+    <!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+    <link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--end::Global Stylesheets Bundle-->
+    <script>// Frame-busting to prevent site from being loaded within a frame without permission (click-jacking) if (window.top != window.self) { window.top.location.replace(window.self.location.href); }</script>
+</head>
+
+
+
+
+
+
+<!--begin::Table widget 12-->
+<div class="card card-flush h-xl-100">
+    <div class="toolbar" id="kt_toolbar">
+        <!--begin::Container-->
+        <div id="kt_toolbar_container" class="container-fluid d-flex flex-stack">
+            <!--begin::Page title-->
+
+            <h1 class="d-flex align-items-lg-end text-white-900 fw-bold my-1 fs-3">Müşteri Listesi</h1>
+
+            <!--end::Page title-->
+            <!--begin::Actions-->
+
+            <div class="d-flex align-items-center py-1">
+
+                <div class="me-4">
+
+                </div>
+            </div>
+            <!--end::Wrapper-->
+            <!--end::Actions-->
+        </div>
+        <!--end::Container-->
+    </div>
+    <!--begin::Body-->
+    <div class="card-body">
+        <!--begin::Table container-->
+        <div class="table-responsive">
+            <!--begin::Table-->
+            <table class="table table-row-dashed align-middle gs-0 gy-3 my-0">
+                <!--begin::Table head-->
+                <thead>
+                    <h2 class="d-flex align-items-lg-end text-white-900 fw-bold my-1 fs-3">Müşteriler</h2>
+                    <tr class="fs-7 fw-bold text-gray-500 border-bottom-0">
+                        <th class="p-0 pb-3 min-w-175px text-start">Müşteri</th>
+                        <th class="p-0 pb-3 min-w-100px text-end">Müşteri Tipi</th>
+                        <th class="p-0 pb-3 min-w-100px text-end">E-posta</th>
+                        <th class="p-0 pb-3 min-w-125px text-end">Telefon</th>
+                        <th class="p-0 pb-3 min-w-100px text-end">Cinsiyet</th>
+                        <th class="p-0 pb-3 min-w-100px text-end">Müşteriyi Görüntüle</th>
+                        <form action="#">
+                            <!--begin::Card-->
+                            <div class="card mb-7" style="border:none; box-shadow:none;">
+                                <!--begin::Card body-->
+                                <div class="card-body" " style="border:none; box-shadow:none;">
+                                    <!--begin::Compact form-->
+                                    <div class="d-flex align-items-center justify-content-end">
+                                        <!--begin::Input group-->
+                                        <div class="position-relative w-md-400px me-md-2 ">
+                                            <i class="ki-outline ki-magnifier fs-3 text-gray-500 position-absolute top-50 translate-middle ms-6"></i>
+                                            <input type="text" class="form-control form-control-solid ps-10" name="search" value="" placeholder="Search">
+                                        </div>
+                                        <!--end::Input group-->
+                                        <!--begin:Action-->
+                                        <div class="d-flex align-items-center">
+                                            <button type="submit" class="btn btn-primary me-5">Search</button>
+
+                                        </div>
+                                        <!--end:Action-->
+                                    </div>
+                                    <!--end::Compact form-->
+                                    <!--begin::Advance form-->
+                                    <!--end::Advance form-->
+                                </div>
+                                <!--end::Card body-->
+                            </div>
+                            <!--end::Card-->
+                        </form>
+                    </tr>
+                </thead>
+                <!--end::Table head-->
+                <!--begin::Table body-->
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                
+                                <div class="d-flex justify-content-start flex-column">
+                                    <a href="/Contact/GetList" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Alperen Keleş</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">Örnek Tip</span>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">example@example.com</span>
+                        </td>
+                        <td class="pe-0">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <span class="text-gray-600 fw-bold d-block fs-6">0555544441</span>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">Erkek</span>
+                        </td>
+                        <td class="text-end">
+                            <a href="~/Contact/GetList" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <i class="ki-outline ki-black-right fs-2 text-gray-500"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                
+                                <div class="d-flex justify-content-start flex-column">
+                                    <a href="/Contact/GetList" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Ahmet Şen</a>
+                                    <span class="text-gray-500 fw-semibold d-block fs-7">Örnek Tip</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">??</span>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">example@example.com</span>
+                        </td>
+                        <td class="pe-0">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="symbol symbol-30px me-3">
+                                </div>
+                                <span class="text-gray-600 fw-bold d-block fs-6">0555544412</span>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">Erkek</span>
+                        </td>
+                        <td class="text-end">
+                            <a href="~/Contact/GetList" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <i class="ki-outline ki-black-right fs-2 text-gray-500"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="symbol symbol-50px me-3">
+                                    <img src="assets/media/stock/600x600/img-46.jpg" class="" alt="" />
+                                </div>
+                                <div class="d-flex justify-content-start flex-column">
+                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Color Face Art</a>
+                                    <span class="text-gray-500 fw-semibold d-block fs-7">Wade Warren</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">0.043 ETH</span>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">0.124 ETH</span>
+                        </td>
+                        <td class="pe-0">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="symbol symbol-30px me-3">
+                                    <img src="assets/media/avatars/300-11.jpg" class="" alt="" />
+                                </div>
+                                <span class="text-gray-600 fw-bold d-block fs-6">1.058 ETH</span>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">5h 09m 23s</span>
+                        </td>
+                        <td class="text-end">
+                            <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <i class="ki-outline ki-black-right fs-2 text-gray-500"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="symbol symbol-50px me-3">
+                                    <img src="assets/media/stock/600x600/img-54.jpg" class="" alt="" />
+                                </div>
+                                <div class="d-flex justify-content-start flex-column">
+                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Blue to Orange Art</a>
+                                    <span class="text-gray-500 fw-semibold d-block fs-7">Jane Cooper</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">0.092 ETH</span>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">0.158 ETH</span>
+                        </td>
+                        <td class="pe-0">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="symbol symbol-30px me-3">
+                                    <img src="assets/media/avatars/300-10.jpg" class="" alt="" />
+                                </div>
+                                <span class="text-gray-600 fw-bold d-block fs-6">0.403 ETH</span>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">7h 23m 16s</span>
+                        </td>
+                        <td class="text-end">
+                            <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <i class="ki-outline ki-black-right fs-2 text-gray-500"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="d-flex align-items-center">
+                                <div class="symbol symbol-50px me-3">
+                                    <img src="assets/media/stock/600x600/img-45.jpg" class="" alt="" />
+                                </div>
+                                <div class="d-flex justify-content-start flex-column">
+                                    <a href="#" class="text-gray-800 fw-bold text-hover-primary mb-1 fs-6">Awesome Bird Art</a>
+                                    <span class="text-gray-500 fw-semibold d-block fs-7">Jacob Jones</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">0.824 ETH</span>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">1.072 ETH</span>
+                        </td>
+                        <td class="pe-0">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="symbol symbol-30px me-3">
+                                    <img src="assets/media/avatars/300-9.jpg" class="" alt="" />
+                                </div>
+                                <span class="text-gray-600 fw-bold d-block fs-6">1.094 ETH</span>
+                            </div>
+                        </td>
+                        <td class="text-end pe-0">
+                            <span class="text-gray-600 fw-bold fs-6">36h 18m 42s</span>
+                        </td>
+                        <td class="text-end">
+                            <a href="#" class="btn btn-sm btn-icon btn-bg-light btn-active-color-primary w-30px h-30px">
+                                <i class="ki-outline ki-black-right fs-2 text-gray-500"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <!--end::Table body-->
+            </table>
+        </div>
+        <!--end::Table-->
+    </div>
+    <!--end: Card Body-->
+</div>
+<!--end::Table widget 12-->

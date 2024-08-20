@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47468E99-6C39-46F8-A5BE-AA5D3EE491FA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UzmanCrm.CrmService.Application</RootNamespace>
+    <AssemblyName>UzmanCrm.CrmService.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=6.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.6.2.0\lib\netstandard2.0\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.10.1.1\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Contrib.Autofac.DependencyInjection, Version=5.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.Contrib.Autofac.DependencyInjection.5.4.0\lib\netstandard2.0\AutoMapper.Contrib.Autofac.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.96.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ClosedXML.0.96.0\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Caching.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Primitives.6.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.JsonWebTokens, Version=6.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.IdentityModel.JsonWebTokens.6.14.1\lib\net472\Microsoft.IdentityModel.JsonWebTokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Logging, Version=6.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.IdentityModel.Logging.6.14.1\lib\net472\Microsoft.IdentityModel.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IdentityModel.Tokens, Version=6.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.IdentityModel.Tokens.6.14.1\lib\net472\Microsoft.IdentityModel.Tokens.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xrm.Sdk, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Presentation\UzmanCrm.CrmService.WebUI\Bin\Microsoft.Xrm.Sdk.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NLog.4.5.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=107.3.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\RestSharp.107.3.0\lib\netstandard2.0\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Tokens.Jwt, Version=6.14.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.IdentityModel.Tokens.Jwt.6.14.1\lib\net472\System.IdentityModel.Tokens.Jwt.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Text.Json.7.0.0\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\DigitalServiceGdpr\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\DigitalServiceTr\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\ContactHelper.cs" />
+    <Compile Include="Helper\GeneralHelper.cs" />
+    <Compile Include="Helper\JwtHelper.cs" />
+    <Compile Include="Helper\OrganizationHelper.cs" />
+    <Compile Include="Helper\ResponseHelper.cs" />
+    <Compile Include="Helper\StaticConsts.cs" />
+    <Compile Include="Helper\TokenValidationHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AddressService\AddressService.cs" />
+    <Compile Include="Service\AddressService\Mappings\AddressProfile.cs" />
+    <Compile Include="Service\BatchApprovalList\BatchApprovalListService.cs" />
+    <Compile Include="Service\BatchApprovalList\Mappings\BatchApprovalListProfile.cs" />
+    <Compile Include="Service\CardClassSegmentService\Mappings\CardClassSegmentProfile.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\CardExceptionDiscountService.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\Mappings\CardExceptionDiscountProfile.cs" />
+    <Compile Include="Service\CardTypeService\CardTypeService.cs" />
+    <Compile Include="Service\ContactService\ContactService.cs" />
+    <Compile Include="Service\ContactService\Mappings\ContactProfile.cs" />
+    <Compile Include="Service\CustomerGroupService\CustomerGroupService.cs" />
+    <Compile Include="Service\CardClassSegmentService\CardClassSegmentService.cs" />
+    <Compile Include="Service\EmailService\EmailService.cs" />
+    <Compile Include="Service\EmailService\Mapping\EmailProfile.cs" />
+    <Compile Include="Service\EndorsementService\EndorsementService.cs" />
+    <Compile Include="Service\Background\BackgroundService.cs" />
+    <Compile Include="Service\BusinessUnitService\Mappings\BusinessUnitProfile.cs" />
+    <Compile Include="Service\BusinessUnitService\BusinessUnitService.cs" />
+    <Compile Include="Service\LoginService\LoginService .cs" />
+    <Compile Include="Service\LoginService\Mapping\LoginProfile.cs" />
+    <Compile Include="Service\LogService\LogService.cs" />
+    <Compile Include="Service\PhoneService\Mapping\PhoneProfile.cs" />
+    <Compile Include="Service\RedisService\RedisService.cs" />
+    <Compile Include="Service\UserService\Mapping\UserProfile.cs" />
+    <Compile Include="Service\UserService\UserService.cs" />
+    <Compile Include="Service\LoyaltyCardService\LoyaltyCardService.cs" />
+    <Compile Include="Service\LoyaltyCardService\Mappings\LoyaltyCardProfile.cs" />
+    <Compile Include="Service\LoyaltySpecificationService\LoyaltySpecificationService.cs" />
+    <Compile Include="Service\PhoneService\PhoneService.cs" />
+    <Compile Include="Service\PortalService\PortalService.cs" />
+    <Compile Include="Service\WageScaleService\Mappings\WageScaleProfile.cs" />
+    <Compile Include="Service\WageScaleService\WageScaleService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\Background\Mappings\" />
+    <Folder Include="Service\CardTypeService\Mappings\" />
+    <Folder Include="Service\EndorsementService\Mappings\" />
+    <Folder Include="Service\LoyaltySpecificationService\Mappings\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\UzmanCrm.CrmService.Domain\UzmanCrm.CrmService.Domain.csproj">
+      <Project>{DA89810B-2BC3-4F20-BB2E-3C64049CB33D}</Project>
+      <Name>UzmanCrm.CrmService.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\UzmanCrm.CrmService.Common\UzmanCrm.CrmService.Common.csproj">
+      <Project>{4d10e3b0-242f-4d89-9eae-299368ec84f5}</Project>
+      <Name>UzmanCrm.CrmService.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\UzmanCrm.CrmService.DAL\UzmanCrm.CrmService.DAL.csproj">
+      <Project>{EC3363DE-0277-4B1D-8105-71D8636C1BFB}</Project>
+      <Name>UzmanCrm.CrmService.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Infrastructure\UzmanCrm.CrmService.Infrastructure\UzmanCrm.CrmService.Infrastructure.csproj">
+      <Project>{1a3e5fe0-05c4-48d9-9f81-8d0dbb96183c}</Project>
+      <Name>UzmanCrm.CrmService.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UzmanCrm.CrmService.Application.Abstractions\UzmanCrm.CrmService.Application.Abstractions.csproj">
+      <Project>{3236922f-ad1c-4710-8a4a-b1775022b2a6}</Project>
+      <Name>UzmanCrm.CrmService.Application.Abstractions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\DigitalServiceGdpr\OtpService.wsdl" />
+    <None Include="Connected Services\DigitalServiceGdpr\OtpService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DigitalServiceGdpr\OtpService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DigitalServiceGdpr\OtpService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DigitalServiceGdpr\OtpService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DigitalServiceGdpr\UzmanCrm.CrmService.Application.DigitalServiceGdpr.AddDigitalFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DigitalServiceGdpr\UzmanCrm.CrmService.Application.DigitalServiceGdpr.CheckOtpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DigitalServiceGdpr\UzmanCrm.CrmService.Application.DigitalServiceGdpr.GetProofResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DigitalServiceGdpr\UzmanCrm.CrmService.Application.DigitalServiceGdpr.SendOtpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DigitalServiceTr\OtpService.wsdl" />
+    <None Include="Connected Services\DigitalServiceTr\OtpService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DigitalServiceTr\OtpService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DigitalServiceTr\OtpService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DigitalServiceTr\OtpService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\DigitalServiceTr\UzmanCrm.CrmService.Application.DigitalServiceTr.AddDigitalFormResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DigitalServiceTr\UzmanCrm.CrmService.Application.DigitalServiceTr.CheckOtpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DigitalServiceTr\UzmanCrm.CrmService.Application.DigitalServiceTr.GetCustomerRecordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DigitalServiceTr\UzmanCrm.CrmService.Application.DigitalServiceTr.GetProofResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\DigitalServiceTr\UzmanCrm.CrmService.Application.DigitalServiceTr.SendOtpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\DigitalServiceGdpr\" />
+    <WCFMetadataStorage Include="Connected Services\DigitalServiceTr\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DigitalServiceTr\OtpService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DigitalServiceTr\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DigitalServiceTr\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DigitalServiceTr\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DigitalServiceGdpr\OtpService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DigitalServiceGdpr\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DigitalServiceGdpr\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\DigitalServiceGdpr\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

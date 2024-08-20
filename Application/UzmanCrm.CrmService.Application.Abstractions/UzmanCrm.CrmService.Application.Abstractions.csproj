@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <LangVersion>9.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3236922F-AD1C-4710-8A4A-B1775022B2A6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UzmanCrm.CrmService.Application.Abstractions</RootNamespace>
+    <AssemblyName>UzmanCrm.CrmService.Application.Abstractions</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hangfire.Core, Version=1.7.32.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Hangfire.Core.1.7.32\lib\net46\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.5.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\NLog.4.5.0\lib\net45\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\IApplicationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AddressService\IAddressService.cs" />
+    <Compile Include="Service\AddressService\Model\DeleteAddressResponseDto.cs" />
+    <Compile Include="Service\AddressService\Model\DeleteAddressRequestDto.cs" />
+    <Compile Include="Service\BatchApprovalList\IBatchApprovalListService.cs" />
+    <Compile Include="Service\BatchApprovalList\Model\BatchApprovalListDto.cs" />
+    <Compile Include="Service\BatchApprovalList\Model\BatchApprovalListProcessStatusRequestDto.cs" />
+    <Compile Include="Service\BatchApprovalList\Model\BatchApprovalListResponseDto.cs" />
+    <Compile Include="Service\BusinessUnitService\Model\StoreDto.cs" />
+    <Compile Include="Service\CardClassSegmentService\ICardClassSegmentService.cs" />
+    <Compile Include="Service\CardClassSegmentService\Model\CardClassSegmentDto.cs" />
+    <Compile Include="Service\CardClassSegmentService\Model\CardClassSegmentRequestDto.cs" />
+    <Compile Include="Service\CardClassSegmentService\Model\CardClassSegmentSaveResponseDto.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\ICardExceptionDiscountService.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\Model\CardApprovalStatusAndExplanationRequestDto.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\Model\CardEndDateRequestDto.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\Model\CardExceptionDiscountAndContactDto.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\Model\CardExceptionDiscountDto.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\Model\CardExceptionDiscountRequestDto.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\Model\CardExceptionDiscountSaveResponseDto.cs" />
+    <Compile Include="Service\CardExceptionDiscountService\Model\GetCardExceptionDiscountsWillBeExpiredSoon_ResponseDto.cs" />
+    <Compile Include="Service\CardTypeService\ICardTypeService.cs" />
+    <Compile Include="Service\CardTypeService\Model\CardTypeDto.cs" />
+    <Compile Include="Service\CardTypeService\Model\CardTypeRequestDto.cs" />
+    <Compile Include="Service\ContactService\IContactService.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\GetCustomerResponseDto.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\SearchDuplicateResponseModel.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\CreateCustomerFormResponse.cs" />
+    <Compile Include="Service\ContactService\Model\CrmCustomerFormRequestDto.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\DataSourceDto.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\ContactSaveRequestDto.cs" />
+    <Compile Include="Service\ContactService\Model\DataSource\DataSourceSaveResponse.cs" />
+    <Compile Include="Service\ContactService\Model\Loyalty\AuthenticateResponseModel.cs" />
+    <Compile Include="Service\ContactService\Model\Loyalty\AuthenticateRequestModel.cs" />
+    <Compile Include="Service\ContactService\Model\Loyalty\SaveLoyaltyCardResponseModel.cs" />
+    <Compile Include="Service\ContactService\Model\Loyalty\SaveLoyaltyCardRequestModel.cs" />
+    <Compile Include="Service\ContactService\Model\GetCustomerByEcomIdResponseDto.cs" />
+    <Compile Include="Service\ContactService\Model\SaveCustomerRequestDto.cs" />
+    <Compile Include="Service\ContactService\Model\SaveCustomerResponseDto.cs" />
+    <Compile Include="Service\ContactService\Model\SearchErpIdRequest.cs" />
+    <Compile Include="Service\ContactService\Model\SearchErpIdResponse.cs" />
+    <Compile Include="Service\ContactService\Model\SearchEcomIdResponse.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\ContactByErpIdDto.cs" />
+    <Compile Include="Service\ContactService\Model\CardExceptionContactRequestDto.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\ContactUpdateResponse.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\ContactByErpAndCardIdDto.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\ContactDto.cs" />
+    <Compile Include="Service\ContactService\Model\CustomerDto.cs" />
+    <Compile Include="Service\ContactService\Model\LoyaltyCardInfoOnContactRequest.cs" />
+    <Compile Include="Service\ContactService\Model\Contact\GetCustomerRequestDto.cs" />
+    <Compile Include="Service\ContactService\Model\SearchEcomIdRequest.cs" />
+    <Compile Include="Service\CustomerGroupService\ICustomerGroupService.cs" />
+    <Compile Include="Service\CustomerGroupService\Model\CustomerGroupGetDto.cs" />
+    <Compile Include="Service\EmailService\IEmailService.cs" />
+    <Compile Include="Service\EmailService\Model\EmailSaveResponse.cs" />
+    <Compile Include="Service\EmailService\Model\EmailSaveRequestDto.cs" />
+    <Compile Include="Service\EmailService\Model\EmailDto.cs" />
+    <Compile Include="Service\EmailService\Model\ContactEmailModelDto.cs" />
+    <Compile Include="Service\EmailService\Model\EmailRequestDto.cs" />
+    <Compile Include="Service\EmailService\Model\EmailResponse.cs" />
+    <Compile Include="Service\EmailService\Model\ToMailSend.cs" />
+    <Compile Include="Service\EndorsementService\IEndorsementService.cs" />
+    <Compile Include="Service\EndorsementService\Model\EndorsementRequestDto.cs" />
+    <Compile Include="Service\EndorsementService\Model\CustomerEndorsementDto.cs" />
+    <Compile Include="Service\EndorsementService\Model\EndorsementSaveResponseDto.cs" />
+    <Compile Include="Service\AddressService\Model\AddressDto.cs" />
+    <Compile Include="Service\AddressService\Model\CityDto.cs" />
+    <Compile Include="Service\AddressService\Model\CountryDto.cs" />
+    <Compile Include="Service\AddressService\Model\DistrictDto.cs" />
+    <Compile Include="Service\AddressService\Model\AddressSaveRequestDto.cs" />
+    <Compile Include="Service\AddressService\Model\AddressSaveResponseDto.cs" />
+    <Compile Include="Service\AddressService\Model\NeighborhoodDto.cs" />
+    <Compile Include="Service\BackgroundService\IBackgroundService.cs" />
+    <Compile Include="Service\BusinessUnitService\IBusinessUnitService.cs" />
+    <Compile Include="Service\BusinessUnitService\Model\BusinessUnitDto.cs" />
+    <Compile Include="Service\ContactService\Model\Erp\ErpTokenResponseModel.cs" />
+    <Compile Include="Service\ContactService\Model\Erp\ErpSaveCustomerRequestModel.cs" />
+    <Compile Include="Service\ContactService\Model\Erp\ErpSaveCustomerResponseModel.cs" />
+    <Compile Include="Service\LoginService\ILoginService.cs" />
+    <Compile Include="Service\LoginService\Model\ApiUserLoginDto.cs" />
+    <Compile Include="Service\LoginService\Model\ApiUserLoginRequestDto.cs" />
+    <Compile Include="Service\LoginService\Model\ApiUserLoginResponseDto.cs" />
+    <Compile Include="Service\LoginService\Model\TokenResponse.cs" />
+    <Compile Include="Service\ExampleService\IExampleService.cs" />
+    <Compile Include="Service\ExampleService\Model\DataTestDto.cs" />
+    <Compile Include="Service\ExampleService\Model\ExampleEntityDto.cs" />
+    <Compile Include="Service\ExampleService\Model\Procedure\UsernameModel.cs" />
+    <Compile Include="Service\LogService\ILogService.cs" />
+    <Compile Include="Service\LoyaltyCardService\ILoyaltyCardService.cs" />
+    <Compile Include="Service\LoyaltyCardService\Model\LoyaltyCardRequestDto.cs" />
+    <Compile Include="Service\LoyaltyCardService\Model\LoyaltyCardDto.cs" />
+    <Compile Include="Service\LoyaltyCardService\Model\LoyaltyCardGetRequestDto.cs" />
+    <Compile Include="Service\LoyaltyCardService\Model\LoyaltyCardSaveResponseDto.cs" />
+    <Compile Include="Service\LoyaltyCardService\Model\LoyaltyCardUpdateDto.cs" />
+    <Compile Include="Service\LoyaltyCardService\Model\LoyaltyCardUpdateResponseDto.cs" />
+    <Compile Include="Service\LoyaltySpecificationService\ILoyaltySpecificationService.cs" />
+    <Compile Include="Service\LoyaltySpecificationService\Model\ValidLoyaltySpecificationItemDto.cs" />
+    <Compile Include="Service\PhoneService\IPhoneService.cs" />
+    <Compile Include="Service\PhoneService\Model\DeletePhoneRequestDto.cs" />
+    <Compile Include="Service\PhoneService\Model\PhoneDto.cs" />
+    <Compile Include="Service\PhoneService\Model\PhoneSaveRequestDto.cs" />
+    <Compile Include="Service\PhoneService\Model\PhoneSaveResponse.cs" />
+    <Compile Include="Service\PhoneService\Model\ContactPhoneModelDto.cs" />
+    <Compile Include="Service\PortalService\IPortalService.cs" />
+    <Compile Include="Service\PortalService\Model\CardExceptionDiscountPortalRequestDto.cs" />
+    <Compile Include="Service\PortalService\Model\PortalUserRequestDto.cs" />
+    <Compile Include="Service\PortalService\Model\PortalUserResponseDto.cs" />
+    <Compile Include="Service\RedisService\IRedisService.cs" />
+    <Compile Include="Service\Shared\BaseByCompanyRequestDto.cs" />
+    <Compile Include="Service\Shared\BaseRequestDto.cs" />
+    <Compile Include="Service\Shared\BaseSchemaDto.cs" />
+    <Compile Include="Service\Shared\DigitalServiceUserInfoModel.cs" />
+    <Compile Include="Service\Shared\ErrorModel.cs" />
+    <Compile Include="Service\Shared\ResponseApi.cs" />
+    <Compile Include="Service\Shared\ResponseError.cs" />
+    <Compile Include="Service\Shared\Response.cs" />
+    <Compile Include="Service\Shared\UserInfo.cs" />
+    <Compile Include="Service\UserService\IUserService.cs" />
+    <Compile Include="Service\UserService\Model\EmployeeDto.cs" />
+    <Compile Include="Service\WageScaleService\IWageScaleService.cs" />
+    <Compile Include="Service\WageScaleService\Model\CreateCustomerWageScaleRequestDto.cs" />
+    <Compile Include="Service\WageScaleService\Model\CustomerWageScaleResponseDto.cs" />
+    <Compile Include="Service\WageScaleService\Model\CustomerWageScaleDto.cs" />
+    <Compile Include="Service\WageScaleService\Model\ValidWageScaleListDto.cs" />
+    <Compile Include="Service\WageScaleService\Model\WageScaleDto.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\UzmanCrm.CrmService.Common\UzmanCrm.CrmService.Common.csproj">
+      <Project>{4d10e3b0-242f-4d89-9eae-299368ec84f5}</Project>
+      <Name>UzmanCrm.CrmService.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
